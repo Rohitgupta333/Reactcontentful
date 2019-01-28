@@ -1,9 +1,29 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import ArticalList from './Artical/ArticalList';
+import SingleArtical from './Artical/SingleArtical';
+import client from './Artical/service'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+render((
+    <Router>
+    <div>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+      </ul>
+
+      <hr />
+
+      <Route exact path="/" component={ArticalList} />
+      <Route path="/:slug" component={SingleArtical} />
+    </div>
+  </Router>
+    ), document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
