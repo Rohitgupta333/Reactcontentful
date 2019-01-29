@@ -1,0 +1,132 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+body *{text-align: left;}
+
+.author {
+  margin-bottom: 20px;
+}
+
+.author img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+
+}
+
+.banner img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* Header css */
+
+.Header {
+  padding: 30px 0;
+  background: #333;
+}
+
+.Header nav.menu {
+  text-align: center;
+}
+
+.Header nav.menu ul {
+  margin: 0;
+  text-align: left;
+  padding: 0;
+}
+
+.Header nav.menu ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.Header nav.menu ul li a {
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+/* Header css */
+
+
+/* footer css */
+
+.Footer {
+  padding: 20px 0;
+  background: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.Footer span {
+  display: block;
+  text-align: center;
+}
+
+/* footer css */
+
+/* main-content */
+.main-content {
+  padding: 30px 0;
+}
+section.Post {
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+section.Post .details {
+  padding: 30px 30px;
+  box-sizing: border-box;
+  background: #fff;
+}
+h2, h2 a {
+  color: #333;
+  font-size: 32px;
+  display: block;
+  margin-bottom: 25px;
+}
+/* main-content */
+
+.feature-banner img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  object-position: center;
+
+}

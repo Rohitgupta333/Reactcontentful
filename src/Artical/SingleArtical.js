@@ -5,7 +5,7 @@ class SingleArtical extends Component {
   constructor() {
     super();
     this.state = {
-      article: null
+      article: []
     };
   }
 
@@ -16,26 +16,32 @@ class SingleArtical extends Component {
       .getEntries({ content_type: "post", "fields.slug": rohit })
       .then(response => {
         this.setState({ article: response.items });
-        console.log(response.items);
       });
   }
 
   render() {
-    let MainData = this.state.article + "Rohit";
+    let MainData = this.state.article;
     console.log(MainData);
 
-    // const listItems = MainData.map(number => <li>{number}</li>);
-
-    // if (!MainData) {
-    //   console.log("No data Found");
-    // }
-    return (
-      <div className="container">
-        <div className="row">
-          <h1>{this.props.match.params.slug}</h1>
+    const SingleDataMain = MainData.map((Data,index) => (
+      <div key="index">
+        <div className="feature-banner">
+          <img src={Data.fields.featureImage.fields.file.url} />
+        </div>
+        <div className="main-content">
+          <div className="container">
+            <h2>{Data.fields.title}</h2>
+            <div className="author">
+              <img src={Data.fields.author.fields.avatar.fields.file.url} />
+              <strong>{Data.fields.author.fields.fullName}</strong>
+            </div>
+            <p>{Data.fields.content}</p>
+          </div>
         </div>
       </div>
-    );
+    ));
+
+    return <div className="single-page">{SingleDataMain}</div>;
   }
 }
 
